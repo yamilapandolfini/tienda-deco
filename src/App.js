@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import NavBar from './components/NavBar';
 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import { ItemDetailContainer } from './components/ItemDetailContainer/itemDetailContainer';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <ItemListContainer />
+          <ItemDetailContainer />
         </BrowserRouter>
       </>
     );

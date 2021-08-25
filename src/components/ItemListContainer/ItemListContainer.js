@@ -10,7 +10,7 @@ const datos = [
     { id:6,title:'producto6', description:'Descripcion producto6', price:5000, pictureUrl:'' },
 ]
 
-const ItemListContainer = () =>{
+const ItemListContainer = ({greeting:saludo, a ,   b:otrab }) =>{
     const [resultadoDeItems, setResultadoDeItems] = useState(null)
 
     useEffect(()=>{
@@ -18,6 +18,10 @@ const ItemListContainer = () =>{
             setTimeout(()=>{
                 console.log(datos)
             },2000)
+        })
+
+        llamadaAlServidor.then((datos) =>{
+            setResultadoDeItems(datos)
         })
     },[])
 
